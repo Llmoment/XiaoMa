@@ -1,0 +1,12 @@
+
+[Time] 2019-06-09 21:14:34.961031
+[Game history link] http://tenhou.net/0/?log=2019060922gm-0001-0000-64075c78&tw=0
+    Reconnected here: Round 1, Turn 5
+    Reconnected here: Round 2, Turn 3
+    Reconnected here: Round 3, Turn 0
+
+[Time] 2019-06-09 21:28:46.727867
+[Game history link] http://tenhou.net/0/?log=None&tw=2
+    [R0T17] NO ONE WINS, NO MORE TILES...    [R1T18] NO ONE WINS, NO MORE TILES...
+[Time] 2019-06-09 22:24:22.684290
+[Game history link] http://tenhou.net/0/?log=None&tw=3
