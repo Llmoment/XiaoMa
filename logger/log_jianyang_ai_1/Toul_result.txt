@@ -52,3 +52,40 @@
 
 [Time] 2019-06-11 13:56:26.230096
 [Game history link] http://tenhou.net/0/?log=None&tw=0
+
+[Time] 2019-06-11 15:53:41.427943
+[Game history link] http://tenhou.net/0/?log=None&tw=3
+
+[Time] 2019-06-11 15:57:26.025763
+[Game history link] http://tenhou.net/0/?log=None&tw=0
+
+[Time] 2019-06-11 16:03:58.297266
+[Game history link] http://tenhou.net/0/?log=None&tw=3
+    [Round-0 Turn-11 Dealer-1]
+        [Win]:0(Riichi)  [By]:3  [Score]:2600  [Tile]:26 9s 
+        [Winning Hand] 2m3m4m4p4p4p5p5p1s2s3s7s8s++9s  [1, 2, 3, 12, 12, 12, 13, 13, 18, 19, 20, 24, 25]++26
+
+[Time] 2019-06-11 16:39:48.933128
+[Game history link] http://tenhou.net/0/?log=None&tw=0
+    [Round-0 Turn-8 Dealer-0]
+        [Win]:0  [By]:0  [Score]:7800  [Tile]:21 4s 
+        [Winning Hand] 3s5swestwest+easteasteast8s8s8s8m8m8m+4s  [20, 22, 29, 29]+[27, 27, 27][25, 25, 25][7, 7, 7]+21
+    [R0T19] NO ONE WINS, NO MORE TILES...
+[Time] 2019-06-11 16:43:24.979814
+[Game history link] http://tenhou.net/0/?log=None&tw=3
+
+[Time] 2019-06-11 16:45:49.130754
+[Game history link] http://tenhou.net/0/?log=None&tw=1
+
+[Time] 2019-06-11 16:48:12.933272
+[Game history link] http://tenhou.net/0/?log=None&tw=1
+
+[Time] 2019-06-11 16:52:23.931956
+[Game history link] http://tenhou.net/0/?log=None&tw=0
+
+[Time] 2019-06-11 16:56:48.197171
+[Game history link] http://tenhou.net/0/?log=None&tw=3
+
+[Time] 2019-06-11 17:09:17.101647
+[Game history link] http://tenhou.net/0/?log=None&tw=0
+    [R0T18] NO ONE WINS, NO MORE TILES...

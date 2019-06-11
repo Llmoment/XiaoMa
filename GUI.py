@@ -994,7 +994,6 @@ class TableDisplay(object):
         获取按键输入,之后重置self.discard_tile
         '''
         temp = self.discarding_tile
-        self.discarding_tile = -1
         return temp
     
 

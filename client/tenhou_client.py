@@ -551,14 +551,13 @@ class TenhouClient:
                 ||waiting..............................
                 ||
                 """
+                #等待按键输入
                 self.drawer.signal.wait()
                 discard_tile_34 = self.drawer.get_discard()
-                '''
-                while discard_tile_34 == -1:
-                    #print('waiting choice...............................................')
-                    discard_tile_34 = self.drawer.get_discard()
-                    sleep(1)
-                '''
+                #获得输入后重新清零该flag
+                self.drawer.signal.clear()
+                print("Going to discard:",discard_tile_34)
+                print("In hand: ",self.game_table.bot.tiles136)
                 discard_tile_136 = self.game_table.bot.tile_34_to_136(discard_tile_34)
             self.game_table.bot.tiles136.remove(discard_tile_136)
             discard_msg = '    [Bot] discards: {} + {}'.format(
