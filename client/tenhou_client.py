@@ -545,7 +545,21 @@ class TenhouClient:
             if not manual:
                 discard_tile_136 = self.game_table.bot.to_discard_tile()
             else:
-                discard_tile_136 = self.drawer.get_discard()
+                a = """
+                ||
+                ||
+                ||waiting..............................
+                ||
+                """
+                self.drawer.signal.wait()
+                discard_tile_34 = self.drawer.get_discard()
+                '''
+                while discard_tile_34 == -1:
+                    #print('waiting choice...............................................')
+                    discard_tile_34 = self.drawer.get_discard()
+                    sleep(1)
+                '''
+                discard_tile_136 = self.game_table.bot.tile_34_to_136(discard_tile_34)
             self.game_table.bot.tiles136.remove(discard_tile_136)
             discard_msg = '    [Bot] discards: {} + {}'.format(
                 Tile.t34_to_g(self.game_table.bot.discard34),

@@ -1,0 +1,25 @@
+2019-06-11 11:09:32:     User(ID3161410E-aWXZngFf) was authenticated successfully
+2019-06-11 11:09:34:     Search for a game...
+2019-06-11 11:09:34:     Join request sent...
+2019-06-11 11:09:35:     Game type = "Red bonus tile" : True, "Open tanyao" : True, "Game  length" : tonpusen
+2019-06-11 11:09:35:     0 seconds passed...
+2019-06-11 11:09:35:     A new game started!
+2019-06-11 11:09:35:     The replay link can be found here: http://tenhou.net/0/?log=None&tw=3
+2019-06-11 11:09:35:     Players are: [Toul - 新人 - None, COM - 新人 - None, COM - 新人 - None, COM - 新人 - None]
+2019-06-11 11:09:37:     --------------------------------------------------
+2019-06-11 11:09:37:     Players: [Toul - 新人 - 25000, COM - 新人 - 25000, COM - 新人 - 25000, COM - 新人 - 25000]
+2019-06-11 11:09:37:     Dealer: COM - 新人 - 25000
+2019-06-11 11:09:37:  
+2019-06-11 11:09:37:     [Player 1] draws a tile...
+2019-06-11 11:09:37: Unexpected exception
+Traceback (most recent call last):
+  File "D:\workspace\AIMahjong\myAI\main.py", line 14, in connect_and_play
+    return client.start_game()
+  File "D:\workspace\AIMahjong\myAI\client\tenhou_client.py", line 138, in start_game
+    self.drawer and self.drawer.opp_draw(who.index(True) + 1)
+  File "GUI.py", line 572, in opp_draw
+    self._add_tile_image(self.pdraw_coords[player-1][0], self.pdraw_coords[player-1][1], 34, player)
+TypeError: _add_tile_image() missing 1 required positional argument: 'is_tile'
+2019-06-11 11:09:37: End the game...
+2019-06-11 11:09:37:     Game was ended unexpected
+2019-06-11 11:09:37: 

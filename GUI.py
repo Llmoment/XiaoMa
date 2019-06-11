@@ -3,7 +3,11 @@ import os
 from tkinter import *
 from tkinter.messagebox import *
 from PIL import ImageTk, Image, ImageFont, ImageDraw
-from main import run_jianyang_ai
+import threading
+import time
+import importlib
+from logger.logger_handler import Logger
+from client.tenhou_client import TenhouClient
 
 
 MSG_BAR = 15
@@ -123,7 +127,10 @@ class TableDisplay(object):
     def __init__(self, canvas, user, user_name):
         #用于指示出什么牌
         self.discarding_tile = -1
-        self.manual_flag = False
+        #是否手动的标志位
+        self.manual_flag = True
+        #用于等牌
+        self.signal = threading.Event()
         self.canvas_width = int(canvas.cget('width'))
         self.canvas_height = int(canvas.cget('height'))
         self.zooming_x = (self.canvas_height - MSG_BAR - self.init_x) / 800
@@ -180,8 +187,47 @@ class TableDisplay(object):
         x1, y1, x2, y2 = self._abs_x(270), self._abs_y(270), self._abs_x(528), self._abs_y(528)
         r = self._abs_wx(40)
         self._create_rounded(x1, y1, x2, y2, r, BgColor.inner_table)
-        run_jianyang_ai(self.user, self.user_name, self)
-    
+        #创建子进程，进行远程通信
+        t = threading.Thread(target=self.run_jianyang_ai,args=('ID3161410E-aWXZngFf','Toul',self))
+        t.start()
+
+    def connect_and_play(self,ai_obj, opponent_class, user, username, lobbytype, gametype, logger_obj, drawer=None):
+        client = TenhouClient(ai_obj, opponent_class, user, username, lobbytype, gametype, logger_obj, drawer)
+        client.connect()
+        try:
+            success_auth = client.authenticate()
+            if success_auth:
+                return client.start_game()
+            else:
+                client.end_game()
+                return False
+        except KeyboardInterrupt:
+            logger_obj.add_line('End the game...')
+            client.end_game()
+        except Exception as e:
+            logger_obj.lg.exception('Unexpected exception', exc_info=e)
+            logger_obj.add_line('End the game...')
+            client.end_game(False)
+            return False
+
+
+    def run_jianyang_ai(self,user, user_name, drawer=None):
+        ai_module = importlib.import_module("agents.experiment_ai")
+        waiting_prediction_class = getattr(ai_module, "EnsembleCLF")
+        ensemble_clfs = waiting_prediction_class()
+        ai_class = getattr(ai_module, "MLAI")
+        ai_obj = ai_class(ensemble_clfs)
+        opponent_class = getattr(ai_module, "OppPlayer")
+
+        #user = "ID3161410E-aWXZngFf"   the user ID that you got after having registered in tenhou.net
+        #user_name = "Toul"   the user name that you have created while registration in tenhou.net
+        #零是与机器人进行对战
+        game_type = '0'  # '137' 南 '193' 东速高
+
+        logger_obj = Logger("log_jianyang_ai_1", user_name)  # two arguments: id of your test epoch, user name
+
+        self.connect_and_play(ai_obj, opponent_class, user, user_name, '0', game_type, logger_obj, drawer)  # play one game
+
     @property 
     def manual(self):
         #返回当前出牌模式
@@ -569,7 +615,7 @@ class TableDisplay(object):
     def opp_draw(self, player):
         self._set_discard_labels(player)
         self.was_opp_draw = True
-        self._add_tile_image(self.pdraw_coords[player-1][0], self.pdraw_coords[player-1][1], 34, player)
+        self._add_tile_image(self.pdraw_coords[player-1][0], self.pdraw_coords[player-1][1], 34, player, False)
         self.cvs.update()
 
     def update_opp(self, melds136, player, final=False):
@@ -927,9 +973,10 @@ class TableDisplay(object):
     def _add_tile_image(self,x,y,tile,player,is_tile):
         x, y = self._abs_x(x), self._abs_y(y)
         if is_tile:
-            bt = Button(self.cvs, image = self.photes[player][tile],command=lambda: self.choiced_tile(tile))
-        self.tiles_objs[player].append(
-            self.cvs.create_window((x,y), window=bt, anchor='nw')
+            #使用lambda i=i: 使得按钮能够返回声明时tile的值
+            bt = Button(self.cvs, image = self.photes[player][tile],command=lambda tile=tile: self.choiced_tile(tile))
+            self.tiles_objs[player].append(
+                self.cvs.create_window((x,y), window=bt, anchor='nw'))
         else:
             self.tiles_objs[player].append(
                 self.cvs.create_image(
@@ -939,17 +986,17 @@ class TableDisplay(object):
     
     def choiced_tile(self, tile):
         self.discarding_tile = tile
+        self.signal.set()
+    
     
     def get_discard(self):
         '''
-        获取按键输入，若为-1一直等到有值位置
+        获取按键输入,之后重置self.discard_tile
         '''
-        self.discarding_tile = -1
-        while self.discarding_tile == -1:
-            pass
         temp = self.discarding_tile
         self.discarding_tile = -1
         return temp
+    
 
 
     def hello_world(self):
@@ -1112,7 +1159,8 @@ class LoginPage(object):
         '''
         self.name = self.username.get() 
         self.ID = self.password.get() 
-        if self.name=='Toul' and self.ID=='ID3161410E-aWXZngFf': 
+        if True:
+        #if self.name=='Toul' and self.ID=='ID3161410E-aWXZngFf': 
             self.page.destroy()
             self.show_main() 
             #self.root.geometry('%dx%d' % (WIDTH, HEIGHT)) #设置窗口大小 
@@ -1129,7 +1177,7 @@ class LoginPage(object):
         canvas.pack(expand=YES)
         img = ImageTk.PhotoImage(bg_image)
         canvas.create_image(0,0, image=img, anchor="nw")
-        TableDisplay(canvas, self.password.get(), self.username.get())      
+        TableDisplay(canvas, 'ID3161410E-aWXZngFf', 'Toul')      
 
 def main():
     root = Tk()
