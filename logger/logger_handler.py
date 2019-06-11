@@ -5,9 +5,6 @@ import datetime
 
 import os
 
-__author__ = "Jianyang Tang"
-__email__ = "jian4yang2.tang1@gmail.com"
-
 
 class Logger:
 

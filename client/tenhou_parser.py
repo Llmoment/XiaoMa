@@ -4,9 +4,6 @@ from urllib.parse import unquote
 
 from client.mahjong_meld import Meld
 
-__author__ = "Jianyang Tang"
-__email__ = "jian4yang2.tang1@gmail.com"
-
 
 class TenhouParser:
 

@@ -11,8 +11,6 @@ from client.tenhou_parser import TenhouParser
 from client.mahjong_meld import Meld
 from client.mahjong_tile import Tile
 
-__author__ = "Jianyang Tang"
-__email__ = "jian4yang2.tang1@gmail.com"
 
 TENHOU_HOST = '133.242.10.78'
 TENHOU_PORT = 10080
@@ -214,10 +212,10 @@ class TenhouClient:
             game_type = '{},{}'.format(self.lobby, self.game_type)
             if not IS_TOURNAMENT:
                 self.drawer and self.drawer.is_searching("Search for a game...")
-                self._log('    🔍Search for a game...')
+                self._log('    Search for a game...')
                 self._send('<JOIN t="{}" />'.format(game_type))
                 self.drawer and self.drawer.is_searching("Join request sent...")
-                self._log('    🔍Join request sent...')
+                self._log('    Join request sent...')
 
             start_time = datetime.datetime.now()
             while self.looking_for_game:
@@ -229,7 +227,7 @@ class TenhouClient:
 
                     if '<REJOIN' in msg:
                         self._send('<JOIN t="{}, r" />'.format(game_type))
-                        self._log('    🔍Rejoin request sent...')
+                        self._log('    Rejoin request sent...')
                         self.drawer and self.drawer.is_searching("Rejoin request sent...")
 
                     if '<GO' in msg:
@@ -261,7 +259,7 @@ class TenhouClient:
                 time_difference = current_time - start_time
 
                 if len(msgs):
-                    self._log("    🔍{} seconds passed...".format(time_difference.seconds))
+                    self._log("    {} seconds passed...".format(time_difference.seconds))
 
                 if len(msgs) and time_difference.seconds > 60 * JOINING_GAME_TIMEOUT:
                     break
@@ -516,6 +514,8 @@ class TenhouClient:
         #都不行的话决策要丢什么牌
         drawn_tile_136 = TenhouParser.parse_tile(msg)
         self.drawer and self.drawer.draw(drawn_tile_136)
+        #出牌模式标志位
+        manual = self.drawer.manual
 
         if not self.game_table.bot.reach_status:
             # print own hand tiles
@@ -527,6 +527,7 @@ class TenhouClient:
 
             # check if bot can call reach
             can_call_reach, to_discard_136 = self.game_table.bot.can_call_reach()
+            #if not manual:
             if can_call_reach:
                 self._send('<REACH hai="{}"/>'.format(to_discard_136))
                 self.game_table.bot.call_reach()
@@ -534,13 +535,17 @@ class TenhouClient:
 
             # check if bot can call a kan set
             kan_type, kaned_tile136 = self.game_table.bot.should_call_kan(drawn_tile_136, False)
+            #if not manual:
             if kan_type and self.game_table.count_remaining_tiles > 0:
                 meld_type = 5 if kan_type == Meld.CHANKAN else 4
                 self._send('<N type="{}" hai="{}"/>'.format(meld_type, kaned_tile136))
                 return True
 
             # bot decides what to discard
-            discard_tile_136 = self.game_table.bot.to_discard_tile()
+            if not manual:
+                discard_tile_136 = self.game_table.bot.to_discard_tile()
+            else:
+                discard_tile_136 = self.drawer.get_discard()
             self.game_table.bot.tiles136.remove(discard_tile_136)
             discard_msg = '    [Bot] discards: {} + {}'.format(
                 Tile.t34_to_g(self.game_table.bot.discard34),
@@ -562,7 +567,7 @@ class TenhouClient:
             if callable(getattr(self.game_table.bot, 'show_riichi_waiting', None)):
                 self.game_table.bot.show_riichi_waiting()
 
-            discard_msg = '        🤖[Bot(Richii) discards]: {} + {}'.format(
+            discard_msg = '        [Bot(Richii) discards]: {} + {}'.format(
                 Tile.t34_to_g(self.game_table.bot.discard34), Tile.t136_to_g([discard_tile_136])
             )
             self.both_log(discard_msg)

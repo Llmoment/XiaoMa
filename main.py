@@ -4,9 +4,6 @@ import importlib
 from logger.logger_handler import Logger
 from client.tenhou_client import TenhouClient
 
-__author__ = "Jianyang Tang"
-__email__ = "jian4yang2.tang1@gmail.com"
-
 
 def connect_and_play(ai_obj, opponent_class, user, username, lobbytype, gametype, logger_obj, drawer=None):
     client = TenhouClient(ai_obj, opponent_class, user, username, lobbytype, gametype, logger_obj, drawer)
@@ -48,7 +45,7 @@ def run_example_ai():
     connect_and_play(ai_obj, opponent_class, user, user_name, '0', game_type, logger_obj)  # play one game
 
 
-def run_jianyang_ai(drawer=None, user, user_name):
+def run_jianyang_ai(user, user_name, drawer=None):
     ai_module = importlib.import_module("agents.experiment_ai")
     waiting_prediction_class = getattr(ai_module, "EnsembleCLF")
     ensemble_clfs = waiting_prediction_class()

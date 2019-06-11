@@ -6,11 +6,6 @@ from PIL import ImageTk, Image, ImageFont, ImageDraw
 from main import run_jianyang_ai
 
 
-__author__ = "Jianyang Tang"
-__copyright__ = "Copyright 2018, Mahjong AI Master Thesis"
-__email__ = "jian4yang2.tang1@gmail.com"
-
-
 MSG_BAR = 15
 HEIGHT = 730
 WIDTH = int(2.6 * HEIGHT / 2 + MSG_BAR)
@@ -113,7 +108,7 @@ class ChosenRect:
     multi_rect = light_green_blue
 
 
-class TableDisplay:
+class TableDisplay(object):
 
     init_x, table_width, pic_width = 18, 800, 40
     init_y, table_height, pic_height = 18, 800, 53
@@ -125,14 +120,21 @@ class TableDisplay:
 
     red_dict = {16: 35, 52: 36, 88: 37}
 
-    def __init__(self, canvas):
+    def __init__(self, canvas, user, user_name):
+        #用于指示出什么牌
+        self.discarding_tile = -1
+        self.manual_flag = False
         self.canvas_width = int(canvas.cget('width'))
         self.canvas_height = int(canvas.cget('height'))
         self.zooming_x = (self.canvas_height - MSG_BAR - self.init_x) / 800
         self.zooming_y = (self.canvas_height - MSG_BAR - self.init_y) / 800
         self.cvs = canvas
+        self.user = user
+        self.user_name = user_name
+        #四个玩家，每个玩家保存37种牌的图片
         self.photes = [[], [], [], []]
         self.small_photoes = []
+        #这里加载图片
         self._load_photoes()
 
         self.num_bonus_indicators = 0
@@ -153,9 +155,11 @@ class TableDisplay:
         self.chosen_rec_obj = None
         self.chosen_recs_obj = []
         self.discard_label_objs = [[], [], [], []]
+        #警告牌
         self.warning_label_objs = [[], [], [], []]
         self.shantin_label_objs = [[], [], [], [], [], []]
         self.shantin_objs = []
+        #预测出的在听牌
         self.waiting_prediction_objs = [[], [], [], []]
         self.searching_obj = None
         self.remain_obj = None
@@ -176,6 +180,12 @@ class TableDisplay:
         x1, y1, x2, y2 = self._abs_x(270), self._abs_y(270), self._abs_x(528), self._abs_y(528)
         r = self._abs_wx(40)
         self._create_rounded(x1, y1, x2, y2, r, BgColor.inner_table)
+        run_jianyang_ai(self.user, self.user_name, self)
+    
+    @property 
+    def manual(self):
+        #返回当前出牌模式
+        return self.manual_flag
 
     def clear_objs(self):
         self._clear_objs(self.round_info_objs)
@@ -573,7 +583,7 @@ class TableDisplay:
                     self.cvs.delete(obj)
             for meld in melds:
                 for m in meld:
-                    self._add_tile_image(x, y, m, player)
+                    self._add_tile_image(x, y, m, player,False)
                     x += self.incre_x[player]
                     y += self.incre_y[player]
                 x += self.incre_x_s[player]
@@ -581,7 +591,7 @@ class TableDisplay:
             unrevealed = 13 - 3 * len(melds)
             if not final:
                 for i in range(unrevealed):
-                    self._add_tile_image(x, y, 34, player)
+                    self._add_tile_image(x, y, 34, player,False)
                     x += self.incre_x[player]
                     y += self.incre_y[player]
 
@@ -591,6 +601,7 @@ class TableDisplay:
             self.cvs.update()
 
     def update_self(self, hand136, meld136):
+        #更新手牌
         hand34 = [self.red_dict.get(t, t // 4) for t in hand136]
         meld34 = [[self.red_dict.get(t, t // 4) for t in m] for m in meld136]
         self.hand_tiles = hand34
@@ -602,7 +613,7 @@ class TableDisplay:
         self.tiles_objs[0] = []
         for meld in meld34:
             for m in meld:
-                self._add_tile_image(x, y, m, 0)
+                self._add_tile_image(x, y, m, 0, False)
                 x += self.incre_x[0]
                 y += self.incre_y[0]
             x += self.incre_x_s[0]
@@ -610,7 +621,7 @@ class TableDisplay:
         self.hand_tiles_coords = []
         for tile in hand34:
             self.hand_tiles_coords.append([x, y])
-            self._add_tile_image(x, y, tile, 0)
+            self._add_tile_image(x, y, tile, 0, True)
             x += self.incre_x[0]
             y += self.incre_y[0]
         self.draw_pos = [x + 8, y]
@@ -676,7 +687,7 @@ class TableDisplay:
         self._set_discard_labels(0)
         tile = self.red_dict.get(tile136, tile136 // 4)
         self.drawn_tile = tile136 // 4
-        self._add_tile_image(self.draw_pos[0], self.draw_pos[1], tile, 0)
+        self._add_tile_image(self.draw_pos[0], self.draw_pos[1], tile, 0,True)
         self.cvs.update()
 
     def discard(self, tile136, player):
@@ -903,6 +914,7 @@ class TableDisplay:
         )
         self.cvs.update()
 
+    '''
     def _add_tile_image(self, x, y, tile, player):
         x, y = self._abs_x(x), self._abs_y(y)
         self.tiles_objs[player].append(
@@ -910,6 +922,43 @@ class TableDisplay:
                 x, y, image=self.photes[player][tile], anchor='nw'
             )
         )
+    '''
+
+    def _add_tile_image(self,x,y,tile,player,is_tile):
+        x, y = self._abs_x(x), self._abs_y(y)
+        if is_tile:
+            bt = Button(self.cvs, image = self.photes[player][tile],command=lambda: self.choiced_tile(tile))
+        self.tiles_objs[player].append(
+            self.cvs.create_window((x,y), window=bt, anchor='nw')
+        else:
+            self.tiles_objs[player].append(
+                self.cvs.create_image(
+                    x, y, image=self.photes[player][tile], anchor='nw'
+                )
+            )
+    
+    def choiced_tile(self, tile):
+        self.discarding_tile = tile
+    
+    def get_discard(self):
+        '''
+        获取按键输入，若为-1一直等到有值位置
+        '''
+        self.discarding_tile = -1
+        while self.discarding_tile == -1:
+            pass
+        temp = self.discarding_tile
+        self.discarding_tile = -1
+        return temp
+
+
+    def hello_world(self):
+        msg = """
+        ||            ||
+        ||    button  ||
+        ||            ||
+        """
+        print(msg)
 
     def _abs_x(self, num):
         return self.init_x + int(num * self.zooming_x)
@@ -1036,8 +1085,7 @@ class TableDisplay:
 
   
 class LoginPage(object): 
-    def __init__(self, canvas, master=None): 
-        self.canvas = canvas
+    def __init__(self, master=None): 
         self.root = master #定义内部变量root 
         self.root.geometry('%dx%d' % (300, 180)) #设置窗口大小 
         self.username = StringVar() 
@@ -1045,6 +1093,9 @@ class LoginPage(object):
         self.createPage() 
   
     def createPage(self): 
+        '''
+        创建登录页面，若点击登录，进入登录确认函数
+        '''
         self.page = Frame(self.root) #创建Frame 
         self.page.pack() 
         Label(self.page).grid(row=0, stick=W) 
@@ -1056,27 +1107,34 @@ class LoginPage(object):
         Button(self.page, text='退出', command=self.page.quit).grid(row=3, column=1, stick=E) 
   
     def loginCheck(self): 
+        '''
+        登录确认，若成功，进入主程序
+        '''
         self.name = self.username.get() 
         self.ID = self.password.get() 
         if self.name=='Toul' and self.ID=='ID3161410E-aWXZngFf': 
-            self.page.destroy() 
-            self.canvas.pack(expand=YES)
-            self.root.geometry('%dx%d' % (WIDTH, HEIGHT)) #设置窗口大小 
+            self.page.destroy()
+            self.show_main() 
+            #self.root.geometry('%dx%d' % (WIDTH, HEIGHT)) #设置窗口大小 
         else: 
             showinfo(title='错误', message='账号或密码错误！')
 
-    def get_user(self):
-        return self.name, self.ID    
+    def show_main(self):
+        '''
+        展开画布并运行AI
+        '''
+        self.root.geometry('%dx%d' % (WIDTH, HEIGHT))
+        self.root.title('智能麻将平台')
+        canvas = Canvas(self.root, bg=BgColor.side_bar, width=WIDTH, height=HEIGHT)
+        canvas.pack(expand=YES)
+        img = ImageTk.PhotoImage(bg_image)
+        canvas.create_image(0,0, image=img, anchor="nw")
+        TableDisplay(canvas, self.password.get(), self.username.get())      
 
 def main():
     root = Tk()
-    canvas = Canvas(root, bg=BgColor.side_bar, width=WIDTH, height=HEIGHT)
-    login = LoginPage(canvas, root)
-    user_name, user = login.get_user()
-    img = ImageTk.PhotoImage(bg_image)
-    canvas.create_image(0, 0, image=img, anchor="nw")
-    drawer = TableDisplay(canvas)
-    run_jianyang_ai(drawer, user_name, user)
+    root.title('登录')
+    login = LoginPage(root)
     root.mainloop()
 
 

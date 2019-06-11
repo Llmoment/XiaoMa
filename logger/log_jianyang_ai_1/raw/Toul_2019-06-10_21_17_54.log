@@ -1,0 +1,57 @@
+2019-06-10 21:17:55:     User(ID3161410E-aWXZngFf) was authenticated successfully
+2019-06-10 21:17:58:     Game type = "Red bonus tile" : True, "Open tanyao" : True, "Game  length" : tonpusen
+2019-06-10 21:17:58:     A new game started!
+2019-06-10 21:17:58:     The replay link can be found here: http://tenhou.net/0/?log=None&tw=3
+2019-06-10 21:17:58:     Players are: [Toul - 新人 - None, COM - 新人 - None, COM - 新人 - None, COM - 新人 - None]
+2019-06-10 21:18:00:     --------------------------------------------------
+2019-06-10 21:18:00:     Players: [Toul - 新人 - 25000, COM - 新人 - 25000, COM - 新人 - 25000, COM - 新人 - 25000]
+2019-06-10 21:18:00:     Dealer: COM - 新人 - 25000
+2019-06-10 21:18:00:  
+2019-06-10 21:18:00:     [Player 1] draws a tile...
+2019-06-10 21:18:01:     [Player 2] draws a tile...
+2019-06-10 21:18:01:     [Player 3] draws a tile...
+2019-06-10 21:18:05: 
+2019-06-10 21:18:05:     [Player 1] draws a tile...
+2019-06-10 21:18:05:     [Player 2] draws a tile...
+2019-06-10 21:18:06:     [Player 3] draws a tile...
+2019-06-10 21:18:06: 
+2019-06-10 21:18:08: 
+2019-06-10 21:18:08:     Remaining tiles: 63
+2019-06-10 21:18:08:     --------------------------------------------------
+2019-06-10 21:18:08: 
+2019-06-10 21:18:08:     [Player 1] draws a tile...
+2019-06-10 21:18:08:     [Player 2] draws a tile...
+2019-06-10 21:18:09:     [Player 3] draws a tile...
+2019-06-10 21:18:09: 
+2019-06-10 21:18:11: 
+2019-06-10 21:18:11:     Remaining tiles: 59
+2019-06-10 21:18:11:     --------------------------------------------------
+2019-06-10 21:18:11: 
+2019-06-10 21:18:11:     [Player 1] draws a tile...
+2019-06-10 21:18:11:     [Player 2] draws a tile...
+2019-06-10 21:18:12:     [Player 3] draws a tile...
+2019-06-10 21:18:12: 
+2019-06-10 21:18:14: 
+2019-06-10 21:18:14:     Remaining tiles: 55
+2019-06-10 21:18:14:     --------------------------------------------------
+2019-06-10 21:18:14: 
+2019-06-10 21:18:14: Unexpected exception
+Traceback (most recent call last):
+  File "D:\workspace\AIMahjong\myAI\main.py", line 14, in connect_and_play
+    return client.start_game()
+  File "D:\workspace\AIMahjong\myAI\client\tenhou_client.py", line 130, in start_game
+    if self._handle_draw_tile(msg):
+  File "D:\workspace\AIMahjong\myAI\client\tenhou_client.py", line 580, in _handle_draw_tile
+    self.drawer and self.drawer.discard(discard_tile_136, 0)
+  File "GUI.py", line 691, in discard
+    self._add_drop(x, y, self.red_dict.get(tile136, tile136 // 4), player)
+  File "GUI.py", line 903, in _add_drop
+    x, y, image=self.photes[player][tile], anchor='nw'
+  File "C:\Users\YishengYihui\Anaconda3\lib\tkinter\__init__.py", line 2489, in create_image
+    return self._create('image', args, kw)
+  File "C:\Users\YishengYihui\Anaconda3\lib\tkinter\__init__.py", line 2480, in _create
+    *(args + self._options(cnf, kw))))
+_tkinter.TclError: invalid command name ".!canvas"
+2019-06-10 21:18:14: End the game...
+2019-06-10 21:18:14:     Game was ended unexpected
+2019-06-10 21:18:14: 

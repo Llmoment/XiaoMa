@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 from client.mahjong_tile import Tile
 
-__author__ = "Jianyang Tang"
-__email__ = "jian4yang2.tang1@gmail.com"
 
 class Meld:
     CHI = 'chi'

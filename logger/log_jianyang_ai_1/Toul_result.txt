@@ -10,3 +10,27 @@
     [R0T17] NO ONE WINS, NO MORE TILES...    [R1T18] NO ONE WINS, NO MORE TILES...
 [Time] 2019-06-09 22:24:22.684290
 [Game history link] http://tenhou.net/0/?log=None&tw=3
+
+[Time] 2019-06-10 20:05:17.827301
+[Game history link] http://tenhou.net/0/?log=None&tw=1
+
+[Time] 2019-06-10 21:17:58.396667
+[Game history link] http://tenhou.net/0/?log=None&tw=3
+
+[Time] 2019-06-10 23:17:47.657465
+[Game history link] http://tenhou.net/0/?log=None&tw=2
+
+[Time] 2019-06-10 23:18:31.624174
+[Game history link] http://tenhou.net/0/?log=None&tw=1
+
+[Time] 2019-06-10 23:19:43.832056
+[Game history link] http://tenhou.net/0/?log=None&tw=1
+
+[Time] 2019-06-10 23:20:51.018586
+[Game history link] http://tenhou.net/0/?log=None&tw=2
+    [R0T17] NO ONE WINS, NO MORE TILES...
+[Time] 2019-06-10 23:33:37.558327
+[Game history link] http://tenhou.net/0/?log=None&tw=0
+
+[Time] 2019-06-10 23:59:11.699718
+[Game history link] http://tenhou.net/0/?log=None&tw=2

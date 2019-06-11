@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 from client.mahjong_player import MainPlayer
 
-__author__ = "Jianyang Tang"
-__email__ = "jian4yang2.tang1@gmail.com"
-
 
 class AIInterface(MainPlayer):
 
