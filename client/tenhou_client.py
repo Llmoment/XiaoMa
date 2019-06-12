@@ -211,10 +211,10 @@ class TenhouClient:
         else:
             game_type = '{},{}'.format(self.lobby, self.game_type)
             if not IS_TOURNAMENT:
-                self.drawer and self.drawer.is_searching("Search for a game...")
+                self.drawer and self.drawer.is_searching("正在寻找对局...")
                 self._log('    Search for a game...')
                 self._send('<JOIN t="{}" />'.format(game_type))
-                self.drawer and self.drawer.is_searching("Join request sent...")
+                self.drawer and self.drawer.is_searching("正在加入对局...")
                 self._log('    Join request sent...')
 
             start_time = datetime.datetime.now()
@@ -223,12 +223,12 @@ class TenhouClient:
                 msgs = self._get()
                 for msg in msgs:
                     self.drawer and self.drawer.is_searching(
-                        "Searching, {}s passed...".format((datetime.datetime.now() - start_time).seconds))
+                        "正在寻找对局, 已用时：{}s ...".format((datetime.datetime.now() - start_time).seconds))
 
                     if '<REJOIN' in msg:
                         self._send('<JOIN t="{}, r" />'.format(game_type))
                         self._log('    Rejoin request sent...')
-                        self.drawer and self.drawer.is_searching("Rejoin request sent...")
+                        self.drawer and self.drawer.is_searching("正在重新连接...")
 
                     if '<GO' in msg:
                         self._send('<GOK /')
@@ -267,7 +267,7 @@ class TenhouClient:
         # End game if did not found a game when time runs out
         if self.looking_for_game:
             self.logger_obj.add_line('    Cannot find any open game')
-            self.drawer and self.drawer.is_searching("Can not find any game...")
+            self.drawer and self.drawer.is_searching("找不到对局！")
             self.end_game()
             return False
 
@@ -276,7 +276,7 @@ class TenhouClient:
             self._log('    A new game started!')
             self._log('    The replay link can be found here: {}'.format(replay_link))
             self._log('    Players are: {}'.format([self.game_table.bot] + self.game_table.opponents))
-            self.drawer and self.drawer.is_searching("A new game is found...")
+            self.drawer and self.drawer.is_searching("已找到新对局...")
 
         return True
 
@@ -515,7 +515,7 @@ class TenhouClient:
         drawn_tile_136 = TenhouParser.parse_tile(msg)
         self.drawer and self.drawer.draw(drawn_tile_136)
         #出牌模式标志位
-        manual = self.drawer.manual
+        manual = self.drawer.manual.get()
 
         if not self.game_table.bot.reach_status:
             # print own hand tiles

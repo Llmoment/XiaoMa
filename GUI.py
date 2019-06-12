@@ -128,8 +128,9 @@ class TableDisplay(object):
         #用于指示出什么牌
         self.discarding_tile = -1
         #是否手动的标志位
-        self.manual_flag = True
-        #用于等牌
+        #self.manual_flag = False
+        self.manual_flag = BooleanVar(value=True)
+        #设置信号量用于等牌
         self.signal = threading.Event()
         self.canvas_width = int(canvas.cget('width'))
         self.canvas_height = int(canvas.cget('height'))
@@ -179,14 +180,10 @@ class TableDisplay(object):
         self.was_opp_draw = False
 
         self.draw_game_table()
-        # self.message_obj = self.cvs.create_text(
-        #     25, self.canvas_height - MSG_BAR + 12,
-        #     font=("Futura", 15), fill=TxtColor.message,
-        #     text="Message", anchor="nw"
-        # )
         x1, y1, x2, y2 = self._abs_x(270), self._abs_y(270), self._abs_x(528), self._abs_y(528)
         r = self._abs_wx(40)
         self._create_rounded(x1, y1, x2, y2, r, BgColor.inner_table)
+        self.init_checkbt()
         #创建子进程，进行远程通信
         t = threading.Thread(target=self.run_jianyang_ai,args=('ID3161410E-aWXZngFf','Toul',self))
         t.start()
@@ -221,7 +218,6 @@ class TableDisplay(object):
 
         #user = "ID3161410E-aWXZngFf"   the user ID that you got after having registered in tenhou.net
         #user_name = "Toul"   the user name that you have created while registration in tenhou.net
-        #零是与机器人进行对战
         game_type = '0'  # '137' 南 '193' 东速高
 
         logger_obj = Logger("log_jianyang_ai_1", user_name)  # two arguments: id of your test epoch, user name
@@ -384,6 +380,25 @@ class TableDisplay(object):
         self.init_eff_labels()
 
         self.cvs.update()
+    
+    def init_checkbt(self):
+        #创建复选框
+        self.mstatus(self.manual_flag)
+        x, y = 620, 670
+        rgbIm = bg_image.convert("RGB")
+        r,g,b = rgbIm.getpixel((x,y))
+        alpha = 0.5
+        cl = get_alpha_color(BgColor.left_table, "#{:02x}{:02x}{:02x}".format(r, g, b), alpha)
+        checkbt = Checkbutton(self.cvs, text='智能托管',variable=self.manual_flag,
+                              onvalue=False,offvalue=True,bg=cl,command=lambda:self.mstatus(self.manual_flag))
+        self.cvs.create_window((x,y),window=checkbt,anchor='nw',height=30,width=80)
+        self.cvs.update()
+    
+    def mstatus(self,a):
+        if a.get():
+            print("Entering manual mode....")
+        else:
+            print("Entering AI mode....")
 
     def init_monitor_labels(self):
         # monitor labels
@@ -996,15 +1011,6 @@ class TableDisplay(object):
         temp = self.discarding_tile
         return temp
     
-
-
-    def hello_world(self):
-        msg = """
-        ||            ||
-        ||    button  ||
-        ||            ||
-        """
-        print(msg)
 
     def _abs_x(self, num):
         return self.init_x + int(num * self.zooming_x)

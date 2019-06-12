@@ -1,0 +1,279 @@
+2019-06-12 16:23:12:     User(ID3161410E-aWXZngFf) was authenticated successfully
+2019-06-12 16:23:12:     Search for a game...
+2019-06-12 16:23:12:     Join request sent...
+2019-06-12 16:23:13:     Game type = "Red bonus tile" : True, "Open tanyao" : True, "Game  length" : tonpusen
+2019-06-12 16:23:13:     0 seconds passed...
+2019-06-12 16:23:13:     A new game started!
+2019-06-12 16:23:13:     The replay link can be found here: http://tenhou.net/0/?log=None&tw=1
+2019-06-12 16:23:13:     Players are: [Toul - 新人 - None, COM - 新人 - None, COM - 新人 - None, COM - 新人 - None]
+2019-06-12 16:23:16:     --------------------------------------------------
+2019-06-12 16:23:16:     Round number:0, Honba sticks:0, Bonus tile indicator:2s
+2019-06-12 16:23:16:     Players: [Toul - 新人 - 25000, COM - 新人 - 25000, COM - 新人 - 25000, COM - 新人 - 25000]
+2019-06-12 16:23:16:     Dealer: COM - 新人 - 25000
+2019-06-12 16:23:16:     Round  wind: east
+2019-06-12 16:23:16:     Player wind: south
+2019-06-12 16:23:16:  
+2019-06-12 16:23:16:     [Player 3] draws a tile...
+2019-06-12 16:23:16:     [Player 3] discards:  + center
+2019-06-12 16:23:16: 
+2019-06-12 16:23:16:     [Bot] draws a tile: 3m5m6m8m2p6p7p9p4s5s9snorthblank + 4p
+2019-06-12 16:23:17:         [Waiting prediction] 
+2019-06-12 16:23:17:         [Shantins]: NM: 4  PH: 4  NO19: 4  PPH: 8  7P: 6  QH: 6  
+2019-06-12 16:23:20:     [Bot] discards:  + north
+2019-06-12 16:23:20:     [Bot] hand tiles after discarding: 3m5m6m8m2p4p6p7p9p4s5s9sblank
+2019-06-12 16:23:20: 
+2019-06-12 16:23:20:     Remaining tiles: 68
+2019-06-12 16:23:20:     --------------------------------------------------
+2019-06-12 16:23:20: 
+2019-06-12 16:23:21:     [Player 1] draws a tile...
+2019-06-12 16:23:21:     [Player 1] discards:  + 5p
+2019-06-12 16:23:21:     [Player 2] draws a tile...
+2019-06-12 16:23:22:     [Player 2] discards:  + 6s
+2019-06-12 16:23:22:     [Player 3] draws a tile...
+2019-06-12 16:23:22:     [Player 3] discards: center + 9p
+2019-06-12 16:23:22: 
+2019-06-12 16:23:22:     [Bot] draws a tile: 3m5m6m8m2p4p6p7p9p4s5s9sblank + blank
+2019-06-12 16:23:22:         [Waiting prediction] 
+2019-06-12 16:23:23:         [Shantins]: NM: 3  PH: 4  NO19: 4  PPH: 7  7P: 5  QH: 6  
+2019-06-12 16:23:26:     [Bot] discards: north + 9p
+2019-06-12 16:23:26:     [Bot] hand tiles after discarding: 3m5m6m8m2p4p6p7p4s5s9sblankblank
+2019-06-12 16:23:26: 
+2019-06-12 16:23:26:     Remaining tiles: 64
+2019-06-12 16:23:26:     --------------------------------------------------
+2019-06-12 16:23:26: 
+2019-06-12 16:23:26:     [Player 1] draws a tile...
+2019-06-12 16:23:27:     [Player 1] discards: 5p + 6s
+2019-06-12 16:23:27:     [Player 2] draws a tile...
+2019-06-12 16:23:27:     [Player 2] discards: 6s + 5m
+2019-06-12 16:23:27:     [Player 3] draws a tile...
+2019-06-12 16:23:27:     [Player 3] discards: center9p + 2p
+2019-06-12 16:23:28: 
+2019-06-12 16:23:28:     [Bot] draws a tile: 3m5m6m8m2p4p6p7p4s5s9sblankblank + 3m
+2019-06-12 16:23:28:         [Waiting prediction] 
+2019-06-12 16:23:28:         [Shantins]: NM: 3  PH: 3  NO19: 3  PPH: 6  7P: 4  QH: 6  
+2019-06-12 16:23:30:     [Bot] discards: north9p + 9s
+2019-06-12 16:23:30:     [Bot] hand tiles after discarding: 3m3m5m6m8m2p4p6p7p4s5sblankblank
+2019-06-12 16:23:30: 
+2019-06-12 16:23:30:     Remaining tiles: 60
+2019-06-12 16:23:30:     --------------------------------------------------
+2019-06-12 16:23:30: 
+2019-06-12 16:23:32:     [Player 1] draws a tile...
+2019-06-12 16:23:32:     [Player 1] discards: 5p6s + 4p
+2019-06-12 16:23:32:     [Player 2] draws a tile...
+2019-06-12 16:23:32:     [Player 2] discards: 6s5m + south
+2019-06-12 16:23:32:     [Player 3] draws a tile...
+2019-06-12 16:23:33:     [Player 3] discards: center9p2p + 1m
+2019-06-12 16:23:33: 
+2019-06-12 16:23:33:     [Bot] draws a tile: 3m3m5m6m8m2p4p6p7p4s5sblankblank + blank
+2019-06-12 16:23:33:         [Waiting prediction] P1:3m
+2019-06-12 16:23:33:         [Shantins]: NM: 2  PH: 3  NO19: 3  PPH: 5  7P: 4  QH: 4  
+2019-06-12 16:23:36:     [Bot] discards: north9p9s + 8m
+2019-06-12 16:23:36:     [Bot] hand tiles after discarding: 3m3m5m6m2p4p6p7p4s5sblankblankblank
+2019-06-12 16:23:36: 
+2019-06-12 16:23:36:     Remaining tiles: 56
+2019-06-12 16:23:36:     --------------------------------------------------
+2019-06-12 16:23:36: 
+2019-06-12 16:23:37:     [Player 1] draws a tile...
+2019-06-12 16:23:37:     [Player 1] discards: 5p6s4p + 1m
+2019-06-12 16:23:37:     [Player 2] draws a tile...
+2019-06-12 16:23:38:     [Player 2] discards: 6s5msouth + 6m
+2019-06-12 16:23:38:     [Player 3] draws a tile...
+2019-06-12 16:23:38:     [Player 3] discards: center9p2p1m + 4p
+2019-06-12 16:23:38: 
+2019-06-12 16:23:38:     [Bot] draws a tile: 3m3m5m6m2p4p6p7p4s5sblankblankblank + 8m
+2019-06-12 16:23:38:         [Waiting prediction] P1:3m6mP2:7m
+2019-06-12 16:23:38:         [Shantins]: NM: 2  PH: 3  NO19: 3  PPH: 5  7P: 4  QH: 4  
+2019-06-12 16:23:41:     [Bot] discards: north9p9s8m + 8m
+2019-06-12 16:23:41:     [Bot] hand tiles after discarding: 3m3m5m6m2p4p6p7p4s5sblankblankblank
+2019-06-12 16:23:41: 
+2019-06-12 16:23:41:     Remaining tiles: 52
+2019-06-12 16:23:41:     --------------------------------------------------
+2019-06-12 16:23:41: 
+2019-06-12 16:23:42:     [Player 1] draws a tile...
+2019-06-12 16:23:42:     [Player 1] discards: 5p6s4p1m + east
+2019-06-12 16:23:42:     [Player 2] draws a tile...
+2019-06-12 16:23:43:     [Player 2] discards: 6s5msouth6m + 3m
+2019-06-12 16:23:44:     [Player 3] draws a tile...
+2019-06-12 16:23:44:     [Player 3] discards: center9p2p1m4p + 1s
+2019-06-12 16:23:44: 
+2019-06-12 16:23:44:     [Bot] draws a tile: 3m3m5m6m2p4p6p7p4s5sblankblankblank + west
+2019-06-12 16:23:44:         [Waiting prediction] P1:3m6m2m9mP2:6p8pP3:7m9m
+2019-06-12 16:23:45:         [Shantins]: NM: 2  PH: 3  NO19: 3  PPH: 5  7P: 4  QH: 4  
+2019-06-12 16:23:46:     [Bot] discards: north9p9s8m8m + west
+2019-06-12 16:23:46:     [Bot] hand tiles after discarding: 3m3m5m6m2p4p6p7p4s5sblankblankblank
+2019-06-12 16:23:46: 
+2019-06-12 16:23:46:     Remaining tiles: 48
+2019-06-12 16:23:46:     --------------------------------------------------
+2019-06-12 16:23:46: 
+2019-06-12 16:23:47:     [Player 1] draws a tile...
+2019-06-12 16:23:47:     [Player 1] discards: 5p6s4p1meast + 8s
+2019-06-12 16:23:47:     [Player 2] draws a tile...
+2019-06-12 16:23:47:     [Player 2] discards: 6s5msouth6m3m + 6s
+2019-06-12 16:23:47:     [Player 3] draws a tile...
+2019-06-12 16:23:48:     [Player 3] discards: center9p2p1m4p1s + 3p
+2019-06-12 16:23:48:          Already has dori, CHOW!!!
+2019-06-12 16:23:48:         [Bot calls chow]: 2p4p3p
+2019-06-12 16:23:48:         [Waiting prediction] P1:fortune3m6mP2:6p8p3pP3:3s7m
+2019-06-12 16:23:48:         [Shantins]: NM: 1  NO19: 2  QH: 4  
+2019-06-12 16:23:51:         [Bot] hand tiles: 3m3m5m6m2p4p6p7p4s5sblankblankblank + 3p
+2019-06-12 16:23:51:         [Bot] discards tile 7p after called meld
+2019-06-12 16:23:51: 
+2019-06-12 16:23:52:     [Player 1] draws a tile...
+2019-06-12 16:23:52:     [Player 1] discards: 5p6s4p1meast8s + 3m
+2019-06-12 16:23:53:     [Player 2] draws a tile...
+2019-06-12 16:23:54:     [Player 2] discards: 6s5msouth6m3m6s + 5m
+2019-06-12 16:23:54:     [Player 3] draws a tile...
+2019-06-12 16:23:54:     [Player 3] discards: center9p2p1m4p1s3p + fortune
+2019-06-12 16:23:54: 
+2019-06-12 16:23:54:     [Bot] draws a tile: 3m3m5m6m6p4s5sblankblankblank + 8s + [2p3p4p]
+2019-06-12 16:23:54:         [Waiting prediction] P1:5s6pP2:6p8pP3:7s5s
+2019-06-12 16:23:55:         [Shantins]: NM: 1  NO19: 3  QH: 5  
+2019-06-12 16:23:56:     [Bot] discards: north9p9s8m8mwest7p + 8s
+2019-06-12 16:23:56:     [Bot] hand tiles after discarding: 3m3m5m6m6p4s5sblankblankblank + [2p3p4p]
+2019-06-12 16:23:56: 
+2019-06-12 16:23:56:     Remaining tiles: 41
+2019-06-12 16:23:56:     --------------------------------------------------
+2019-06-12 16:23:56: 
+2019-06-12 16:23:57:     [Player 1] draws a tile...
+2019-06-12 16:23:57:     [Player 1] discards: 5p6s4p1meast8s3m + 4m
+2019-06-12 16:23:57:     [Player 2] draws a tile...
+2019-06-12 16:23:57:     [Player 2] discards: 6s5msouth6m3m6s5m + 9m
+2019-06-12 16:23:57:     [Player 3] draws a tile...
+2019-06-12 16:23:57:     [Player 3] discards: center9p2p1m4p1s3pfortune + 8m
+2019-06-12 16:23:57: 
+2019-06-12 16:23:57:     [Bot] draws a tile: 3m3m5m6m6p4s5sblankblankblank + south + [2p3p4p]
+2019-06-12 16:23:58:         [Waiting prediction] P1:6p8p3pP2:2s6pP3:7s5s
+2019-06-12 16:23:58:         [Shantins]: NM: 1  NO19: 3  QH: 4  
+2019-06-12 16:23:59:     [Bot] discards: north9p9s8m8mwest7p8s + south
+2019-06-12 16:23:59:     [Bot] hand tiles after discarding: 3m3m5m6m6p4s5sblankblankblank + [2p3p4p]
+2019-06-12 16:23:59: 
+2019-06-12 16:23:59:     Remaining tiles: 37
+2019-06-12 16:23:59:     --------------------------------------------------
+2019-06-12 16:23:59: 
+2019-06-12 16:24:00:     [Player 1] draws a tile...
+2019-06-12 16:24:00:     [Player 1] discards: 5p6s4p1meast8s3m4m + 3s
+2019-06-12 16:24:00:     [Player 2] draws a tile...
+2019-06-12 16:24:00:     [Player 2] discards: 6s5msouth6m3m6s5m9m + 7m
+2019-06-12 16:24:00:     [Player 3] draws a tile...
+2019-06-12 16:24:01:     [Player 3] discards: center9p2p1m4p1s3pfortune8m + 5m
+2019-06-12 16:24:01: 
+2019-06-12 16:24:01:     [Bot] draws a tile: 3m3m5m6m6p4s5sblankblankblank + 8p + [2p3p4p]
+2019-06-12 16:24:01:         [Waiting prediction] P1:6p4sP2:2s1pP3:7s5s2s4s
+2019-06-12 16:24:01:         [Shantins]: NM: 1  NO19: 2  QH: 4  
+2019-06-12 16:24:02:     [Bot] discards: north9p9s8m8mwest7p8ssouth + 8p
+2019-06-12 16:24:02:     [Bot] hand tiles after discarding: 3m3m5m6m6p4s5sblankblankblank + [2p3p4p]
+2019-06-12 16:24:02: 
+2019-06-12 16:24:02:     Remaining tiles: 33
+2019-06-12 16:24:02:     --------------------------------------------------
+2019-06-12 16:24:02: 
+2019-06-12 16:24:03:     [Player 1] draws a tile...
+2019-06-12 16:24:03:     [Player 1] discards: 5p6s4p1meast8s3m4m3s + 1m
+2019-06-12 16:24:03:     [Player 2] draws a tile...
+2019-06-12 16:24:04:     [Player 2] discards: 6s5msouth6m3m6s5m9m7m + west
+2019-06-12 16:24:04:     [Player 3] draws a tile...
+2019-06-12 16:24:04:     [Player 3] discards: center9p2p1m4p1s3pfortune8m5m + 2p
+2019-06-12 16:24:04: 
+2019-06-12 16:24:04:     [Bot] draws a tile: 3m3m5m6m6p4s5sblankblankblank + 5p + [2p3p4p]
+2019-06-12 16:24:04:         [Waiting prediction] P1:blank4s7sP2:6pblank9pP3:7s5s2s
+2019-06-12 16:24:04:         [Shantins]: NM: 1  NO19: 2  QH: 4  
+2019-06-12 16:24:06:     [Bot] discards: north9p9s8m8mwest7p8ssouth8p + 6p
+2019-06-12 16:24:06:     [Bot] hand tiles after discarding: 3m3m5m6m5p4s5sblankblankblank + [2p3p4p]
+2019-06-12 16:24:06: 
+2019-06-12 16:24:06:     Remaining tiles: 29
+2019-06-12 16:24:06:     --------------------------------------------------
+2019-06-12 16:24:06: 
+2019-06-12 16:24:07:     [Player 1] draws a tile...
+2019-06-12 16:24:07:     [Player 1] discards: 5p6s4p1meast8s3m4m3s1m + 4s
+2019-06-12 16:24:07:     [Player 2] draws a tile...
+2019-06-12 16:24:07:     [Player 2] discards: 6s5msouth6m3m6s5m9m7mwest + 3s
+2019-06-12 16:24:07:     [Player 3] draws a tile...
+2019-06-12 16:24:07:     [Player 3] discards: center9p2p1m4p1s3pfortune8m5m2p + 5p
+2019-06-12 16:24:07: 
+2019-06-12 16:24:07:     [Bot] draws a tile: 3m3m5m6m5p4s5sblankblankblank + 7s + [2p3p4p]
+2019-06-12 16:24:08:         [Waiting prediction] P1:blank7sP2:6pblank9pP3:5s7s2s
+2019-06-12 16:24:08:         [Shantins]: NM: 1  NO19: 3  QH: 5  
+2019-06-12 16:24:09:     [Bot] discards: north9p9s8m8mwest7p8ssouth8p6p + 7s
+2019-06-12 16:24:09:     [Bot] hand tiles after discarding: 3m3m5m6m5p4s5sblankblankblank + [2p3p4p]
+2019-06-12 16:24:09: 
+2019-06-12 16:24:09:     Remaining tiles: 25
+2019-06-12 16:24:09:     --------------------------------------------------
+2019-06-12 16:24:09: 
+2019-06-12 16:24:10:     [Player 1] draws a tile...
+2019-06-12 16:24:10:     [Player 1] discards: 5p6s4p1meast8s3m4m3s1m4s + 1p
+2019-06-12 16:24:10:     [Player 2] draws a tile...
+2019-06-12 16:24:11:     [Player 2] discards: 6s5msouth6m3m6s5m9m7mwest3s + 5s
+2019-06-12 16:24:11:     [Player 3] draws a tile...
+2019-06-12 16:24:11:     [Player 3] discards: center9p2p1m4p1s3pfortune8m5m2p5p + center
+2019-06-12 16:24:11: 
+2019-06-12 16:24:11:     [Bot] draws a tile: 3m3m5m6m5p4s5sblankblankblank + 8p + [2p3p4p]
+2019-06-12 16:24:11:         [Waiting prediction] P1:blank7sP2:6p3p8pP3:5s6s
+2019-06-12 16:24:12:         [Shantins]: NM: 1  NO19: 3  QH: 4  
+2019-06-12 16:24:13:     [Bot] discards: north9p9s8m8mwest7p8ssouth8p6p7s + 8p
+2019-06-12 16:24:13:     [Bot] hand tiles after discarding: 3m3m5m6m5p4s5sblankblankblank + [2p3p4p]
+2019-06-12 16:24:13: 
+2019-06-12 16:24:13:     Remaining tiles: 21
+2019-06-12 16:24:13:     --------------------------------------------------
+2019-06-12 16:24:13: 
+2019-06-12 16:24:14:     [Player 1] draws a tile...
+2019-06-12 16:24:14:     [Player 1] discards: 5p6s4p1meast8s3m4m3s1m4s1p + 2p
+2019-06-12 16:24:14:     [Player 2] draws a tile...
+2019-06-12 16:24:14:     [Player 2] discards: 6s5msouth6m3m6s5m9m7mwest3s5s + 5p
+2019-06-12 16:24:14:     [Player 3] draws a tile...
+2019-06-12 16:24:15:     [Player 3] discards: center9p2p1m4p1s3pfortune8m5m2p5pcenter + 8m
+2019-06-12 16:24:15: 
+2019-06-12 16:24:15:     [Bot] draws a tile: 3m3m5m6m5p4s5sblankblankblank + 7m + [2p3p4p]
+2019-06-12 16:24:15:         [Waiting prediction] P1:blank6pP2:3p6p1pP3:5s6s2s
+2019-06-12 16:24:15:          [Waiting]: 2 3s 3900,1 6s 2000, total remain: 3
+2019-06-12 16:24:15:          [Waiting]: 2 3s 3900,1 6s 2000, total remain: 3
+2019-06-12 16:24:18:     [Bot] discards: north9p9s8m8mwest7p8ssouth8p6p7s8p + 5p
+2019-06-12 16:24:18:     [Bot] hand tiles after discarding: 3m3m5m6m7m4s5sblankblankblank + [2p3p4p]
+2019-06-12 16:24:18: 
+2019-06-12 16:24:18:     Remaining tiles: 17
+2019-06-12 16:24:18:     --------------------------------------------------
+2019-06-12 16:24:18: 
+2019-06-12 16:24:19:     [Player 1] draws a tile...
+2019-06-12 16:24:19:     [Player 1] discards: 5p6s4p1meast8s3m4m3s1m4s1p2p + 1s
+2019-06-12 16:24:19:     [Player 2] draws a tile...
+2019-06-12 16:24:20:     [Player 2] discards: 6s5msouth6m3m6s5m9m7mwest3s5s5p + 3s
+2019-06-12 16:24:20:          Can win this tile
+2019-06-12 16:24:21:     --------------------------------------------------
+2019-06-12 16:24:21: 
+2019-06-12 16:24:21:     <AGARI ba="0,0" hai="8,9,16,22,26,81,84,90,125,126,127" m="25975" machi="81" ten="30,3900,0" yaku="18,1,52,1,54,1" doraHai="76" who="0" fromWho="2" sc="250,39,250,0,250,-39,250,0" />
+2019-06-12 16:24:21:     Player 0 wins from player 2's discard 3s
+2019-06-12 16:24:21:     3m3m5m6m7m4s5sblankblankblank +2p3p4p + 3s, 3900p
+2019-06-12 16:24:21: 
+2019-06-12 16:24:21:     --------------------------------------------------
+2019-06-12 16:24:29:     --------------------------------------------------
+2019-06-12 16:24:29:     Round number:1, Honba sticks:0, Bonus tile indicator:1s
+2019-06-12 16:24:29:     Players: [Toul - 新人 - 28900, COM - 新人 - 25000, COM - 新人 - 21100, COM - 新人 - 25000]
+2019-06-12 16:24:29:     Dealer: Toul - 新人 - 28900
+2019-06-12 16:24:29:     Round  wind: east
+2019-06-12 16:24:29:     Player wind: east
+2019-06-12 16:24:29:  
+2019-06-12 16:24:29: 
+2019-06-12 16:24:29:     [Bot] draws a tile: 7m8m1p5p1s2s7s8s9seastsouthsouthcenter + 2s
+2019-06-12 16:24:29:         [Waiting prediction] 
+2019-06-12 16:24:30:         [Shantins]: NM: 3  PH: 3  NO19: 6  PPH: 6  7P: 4  QH: 4  
+2019-06-12 16:24:32:     [Bot] discards:  + center
+2019-06-12 16:24:32:     [Bot] hand tiles after discarding: 7m8m1p5p1s2s2s7s8s9seastsouthsouth
+2019-06-12 16:24:32: 
+2019-06-12 16:24:32:     Remaining tiles: 69
+2019-06-12 16:24:32:     --------------------------------------------------
+2019-06-12 16:24:33: Unexpected exception
+Traceback (most recent call last):
+  File "GUI.py", line 195, in connect_and_play
+    return client.start_game()
+  File "D:\workspace\AIMahjong\myAI\client\tenhou_client.py", line 130, in start_game
+    if self._handle_draw_tile(msg):
+  File "D:\workspace\AIMahjong\myAI\client\tenhou_client.py", line 597, in _handle_draw_tile
+    self.drawer and self.drawer.set_remain(self.game_table.count_remaining_tiles)
+  File "GUI.py", line 599, in set_remain
+    self.cvs.itemconfig(self.remain_obj, text="{}".format(num))
+  File "C:\Users\YishengYihui\Anaconda3\lib\tkinter\__init__.py", line 2578, in itemconfigure
+    return self._configure(('itemconfigure', tagOrId), cnf, kw)
+  File "C:\Users\YishengYihui\Anaconda3\lib\tkinter\__init__.py", line 1476, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+RuntimeError: main thread is not in main loop
+2019-06-12 16:24:33: End the game...
+2019-06-12 16:24:33:     Game was ended unexpected
+2019-06-12 16:24:33: 

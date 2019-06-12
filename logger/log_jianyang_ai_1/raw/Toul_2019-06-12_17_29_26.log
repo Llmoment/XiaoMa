@@ -1,0 +1,113 @@
+2019-06-12 17:29:27:     User(ID3161410E-aWXZngFf) was authenticated successfully
+2019-06-12 17:29:27:     Search for a game...
+2019-06-12 17:29:27:     Join request sent...
+2019-06-12 17:29:28:     Game type = "Red bonus tile" : True, "Open tanyao" : True, "Game  length" : tonpusen
+2019-06-12 17:29:28:     0 seconds passed...
+2019-06-12 17:29:28:     A new game started!
+2019-06-12 17:29:28:     The replay link can be found here: http://tenhou.net/0/?log=None&tw=1
+2019-06-12 17:29:28:     Players are: [Toul - 新人 - None, COM - 新人 - None, COM - 新人 - None, COM - 新人 - None]
+2019-06-12 17:29:32:     --------------------------------------------------
+2019-06-12 17:29:32:     Round number:0, Honba sticks:0, Bonus tile indicator:5p
+2019-06-12 17:29:32:     Players: [Toul - 新人 - 25000, COM - 新人 - 25000, COM - 新人 - 25000, COM - 新人 - 25000]
+2019-06-12 17:29:32:     Dealer: COM - 新人 - 25000
+2019-06-12 17:29:32:     Round  wind: east
+2019-06-12 17:29:32:     Player wind: south
+2019-06-12 17:29:32:  
+2019-06-12 17:29:32:     [Player 3] draws a tile...
+2019-06-12 17:29:32:     [Player 3] discards:  + 8m
+2019-06-12 17:29:32: 
+2019-06-12 17:29:32:     [Bot] draws a tile: 2m1p1p1p5p8p3s4s7s8s8s8seast + 9s
+2019-06-12 17:29:38:     [Bot] discards:  + east
+2019-06-12 17:29:38:     [Bot] hand tiles after discarding: 2m1p1p1p5p8p3s4s7s8s8s8s9s
+2019-06-12 17:29:38: 
+2019-06-12 17:29:38:     Remaining tiles: 68
+2019-06-12 17:29:38:     --------------------------------------------------
+2019-06-12 17:29:38: 
+2019-06-12 17:29:39:     [Player 1] draws a tile...
+2019-06-12 17:29:39:     [Player 1] discards:  + 1m
+2019-06-12 17:29:39:     [Player 2] draws a tile...
+2019-06-12 17:29:39:     [Player 2] discards:  + 1m
+2019-06-12 17:29:39:     [Player 3] draws a tile...
+2019-06-12 17:29:39:     [Player 3] discards: 8m + 8p
+2019-06-12 17:29:40: 
+2019-06-12 17:29:40:     [Bot] draws a tile: 2m1p1p1p5p8p3s4s7s8s8s8s9s + 3p
+2019-06-12 17:29:40:         [Waiting prediction] 
+2019-06-12 17:29:40:         [Shantins]: NM: 1  PH: 3  NO19: 4  PPH: 4  7P: 4  QH: 5  
+2019-06-12 17:29:42:     [Bot] discards: east + 2m
+2019-06-12 17:29:42:     [Bot] hand tiles after discarding: 1p1p1p3p5p8p3s4s7s8s8s8s9s
+2019-06-12 17:29:42: 
+2019-06-12 17:29:42:     Remaining tiles: 64
+2019-06-12 17:29:42:     --------------------------------------------------
+2019-06-12 17:29:42: 
+2019-06-12 17:29:43:     [Player 1] draws a tile...
+2019-06-12 17:29:43:     [Player 1] discards: 1m + 3m
+2019-06-12 17:29:43:     [Player 2] draws a tile...
+2019-06-12 17:29:43:     [Player 2] discards: 1m + 7m
+2019-06-12 17:29:43:     [Player 3] draws a tile...
+2019-06-12 17:29:43:     [Player 3] discards: 8m8p + 1p
+2019-06-12 17:29:43:          Almost riichi, do not call meld!!!
+2019-06-12 17:29:44: 
+2019-06-12 17:29:44:     [Bot] draws a tile: 1p1p1p3p5p8p3s4s7s8s8s8s9s + center
+2019-06-12 17:29:45:         [Waiting prediction] 
+2019-06-12 17:29:45:         [Shantins]: NM: 1  PH: 3  NO19: 4  PPH: 4  7P: 4  QH: 4  
+2019-06-12 17:29:47:     [Bot] discards: east2m + center
+2019-06-12 17:29:47:     [Bot] hand tiles after discarding: 1p1p1p3p5p8p3s4s7s8s8s8s9s
+2019-06-12 17:29:47: 
+2019-06-12 17:29:47:     Remaining tiles: 60
+2019-06-12 17:29:47:     --------------------------------------------------
+2019-06-12 17:29:47: 
+2019-06-12 17:29:48:     [Player 1] draws a tile...
+2019-06-12 17:29:48:     [Player 1] discards: 1m3m + 6m
+2019-06-12 17:29:48:     [Player 2] draws a tile...
+2019-06-12 17:29:48:     [Player 2] discards: 1m7m + 9s
+2019-06-12 17:29:48:     [Player 3] draws a tile...
+2019-06-12 17:29:49:     [Player 3] discards: 8m8p1p + 6m
+2019-06-12 17:29:49: 
+2019-06-12 17:29:49:     [Bot] draws a tile: 1p1p1p3p5p8p3s4s7s8s8s8s9s + north
+2019-06-12 17:29:49:         [Waiting prediction] 
+2019-06-12 17:29:49:         [Shantins]: NM: 1  PH: 3  NO19: 4  PPH: 4  7P: 4  QH: 4  
+2019-06-12 17:29:52:     [Bot] discards: east2mcenter + north
+2019-06-12 17:29:52:     [Bot] hand tiles after discarding: 1p1p1p3p5p8p3s4s7s8s8s8s9s
+2019-06-12 17:29:52: 
+2019-06-12 17:29:52:     Remaining tiles: 56
+2019-06-12 17:29:52:     --------------------------------------------------
+2019-06-12 17:29:52: 
+2019-06-12 17:29:52:     [Player 1] draws a tile...
+2019-06-12 17:29:53:     [Player 1] discards: 1m3m6m + 7p
+2019-06-12 17:29:53:     [Player 2] draws a tile...
+2019-06-12 17:29:53:     [Player 2] discards: 1m7m9s + 1s
+2019-06-12 17:29:53:     [Player 3] draws a tile...
+2019-06-12 17:29:53:     [Player 3] discards: 8m8p1p6m + 8s
+2019-06-12 17:29:53:          Tile is in a chow, do not KAN
+2019-06-12 17:29:53:          Almost riichi, do not call meld!!!
+2019-06-12 17:29:54: 
+2019-06-12 17:29:54:     [Bot] draws a tile: 1p1p1p3p5p8p3s4s7s8s8s8s9s + 5p
+2019-06-12 17:29:55:         [Waiting prediction] P1:2p4pP2:2pP3:2p3p
+2019-06-12 17:29:55:         [Shantins]: NM: 1  PH: 3  NO19: 4  PPH: 3  7P: 3  QH: 5  
+2019-06-12 17:29:56:     [Bot] discards: east2mcenternorth + 8p
+2019-06-12 17:29:56:     [Bot] hand tiles after discarding: 1p1p1p3p5p5p3s4s7s8s8s8s9s
+2019-06-12 17:29:56: 
+2019-06-12 17:29:56:     Remaining tiles: 52
+2019-06-12 17:29:56:     --------------------------------------------------
+2019-06-12 17:29:56: 
+2019-06-12 17:29:57:     [Player 1] draws a tile...
+2019-06-12 17:29:58: Unexpected exception
+Traceback (most recent call last):
+  File "GUI.py", line 197, in connect_and_play
+    return client.start_game()
+  File "D:\workspace\AIMahjong\myAI\client\tenhou_client.py", line 138, in start_game
+    self.drawer and self.drawer.opp_draw(who.index(True) + 1)
+  File "GUI.py", line 631, in opp_draw
+    self._set_discard_labels(player)
+  File "GUI.py", line 769, in _set_discard_labels
+    self._set_back_discard_labels()
+  File "GUI.py", line 777, in _set_back_discard_labels
+    self.cvs.itemconfig(obj, fill=BgColor.status_monitor, outline=BgColor.status_monitor)
+  File "C:\Users\YishengYihui\Anaconda3\lib\tkinter\__init__.py", line 2578, in itemconfigure
+    return self._configure(('itemconfigure', tagOrId), cnf, kw)
+  File "C:\Users\YishengYihui\Anaconda3\lib\tkinter\__init__.py", line 1476, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+RuntimeError: main thread is not in main loop
+2019-06-12 17:29:58: End the game...
+2019-06-12 17:29:58:     Game was ended unexpected
+2019-06-12 17:29:58: 
